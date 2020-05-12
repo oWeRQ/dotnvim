@@ -1,8 +1,21 @@
+call defx#custom#option('_', {
+      \ 'winwidth': 30,
+      \ 'split': 'vertical',
+      \ 'columns': 'mark:git:icon:filename',
+      \ 'show_ignored_files': 0,
+      \ 'buffer_name': 'defxplorer',
+      \ 'toggle': 1,
+      \ 'resume': 1
+      \ })
+
+noremap <silent><F3> :Defx<CR>
+
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
   nnoremap <silent><buffer><expr> <CR>
-  \ defx#do_action('open')
+  \ defx#do_action('drop')
+  "\ defx#do_action('open')
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m

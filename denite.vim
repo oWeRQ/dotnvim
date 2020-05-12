@@ -1,3 +1,5 @@
+noremap <silent> <C-p> :Denite source<CR>
+
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>

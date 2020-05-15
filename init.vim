@@ -1,8 +1,13 @@
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('$HOME/.local/share/nvim/plugged')
     Plug 'rakr/vim-one'
     Plug 'jacoborus/tender.vim'
     Plug 'nanotech/jellybeans.vim'
 
+    " Plug 'ajh17/spacegray.vim'
+    " Plug 'tomasr/molokai'
+    " Plug 'alessandroyorba/alduin'
+    " Plug 'alessandroyorba/despacio'
+    " Plug 'sainnhe/vim-color-forest-night'
     " Plug 'mhinz/vim-janah'
     " Plug 'gosukiwi/vim-atom-dark'
     " Plug 'kristijanhusak/vim-hybrid-material'
@@ -20,7 +25,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
     Plug 'Lenovsky/nuake'
-    Plug 'tyru/caw.vim'
     Plug 'majutsushi/tagbar'
     Plug 'mhinz/vim-startify'
     Plug 'mhinz/vim-signify'
@@ -30,19 +34,26 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'kristijanhusak/defx-git'
+    Plug 'kristijanhusak/defx-icons'
+    Plug 'junegunn/gv.vim'
 
+    Plug 't9md/vim-quickhl'
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'tomtom/tcomment_vim'
+    " Plug 'tyru/caw.vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
     Plug 'andrewradev/splitjoin.vim'
     Plug 'junegunn/fzf' ", { 'do': { -> fzf#install() } }
-    Plug 'leafoftree/vim-vue-plugin'
+    Plug 'posva/vim-vue'
+    " Plug 'leafoftree/vim-vue-plugin'
     Plug 'tpope/vim-fugitive'
     Plug 'lambdalisue/gina.vim'
-    Plug 'junegunn/gv.vim'
 
+    " Plug 'xolox/vim-misc'
+    " Plug 'xolox/vim-colorscheme-switcher'
     " Plug 'scrooloose/nerdtree'
     " Plug 'Xuyuanp/nerdtree-git-plugin'
-    " Plug 'kristijanhusak/defx-icons'
     " Plug 'skywind3000/vim-quickui'
     " Plug 'vim-ctrlspace/vim-ctrlspace'
     " Plug 'airblade/vim-gitgutter'
@@ -55,12 +66,13 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-source ~/.config/nvim/common.vim
-source ~/.config/nvim/airline.vim
-source ~/.config/nvim/tagbar.vim
-source ~/.config/nvim/defx.vim
-source ~/.config/nvim/denite.vim
-source ~/.config/nvim/deoplete.vim
+source $HOME/.config/nvim/common.vim
+source $HOME/.config/nvim/airline.vim
+source $HOME/.config/nvim/tagbar.vim
+source $HOME/.config/nvim/defx.vim
+source $HOME/.config/nvim/denite.vim
+source $HOME/.config/nvim/deoplete.vim
+source $HOME/.config/nvim/startify.vim
 
 colorscheme one
 " colorscheme tender
@@ -82,4 +94,9 @@ tnoremap <F5> <C-\><C-n>:GV<CR>
 
 nmap ; gcc
 vmap ; gcc
+
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
 

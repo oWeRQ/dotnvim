@@ -11,7 +11,10 @@ set nobackup
 set nowritebackup
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
-set path+=**
+" set path+=**
+set wildmode=longest:full,full
+set splitbelow
+set splitright
 
 set tabstop=4
 set shiftwidth=4

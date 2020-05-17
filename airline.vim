@@ -1,4 +1,4 @@
-let g:airline_theme = 'one'
+" let g:airline_theme = 'one'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#keymap#enabled = 0
 let g:airline#extensions#tabline#enabled = 1

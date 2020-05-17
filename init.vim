@@ -2,6 +2,7 @@ call plug#begin('$HOME/.local/share/nvim/plugged')
     Plug 'rakr/vim-one'
     Plug 'jacoborus/tender.vim'
     Plug 'nanotech/jellybeans.vim'
+    Plug 'KeitaNakamura/neodark.vim'
 
     " Plug 'ajh17/spacegray.vim'
     " Plug 'tomasr/molokai'
@@ -28,27 +29,32 @@ call plug#begin('$HOME/.local/share/nvim/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'mhinz/vim-startify'
     Plug 'mhinz/vim-signify'
-    Plug 'scrooloose/syntastic'
+    " Plug 'scrooloose/syntastic'
     Plug 'mattn/emmet-vim'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+    " Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'kristijanhusak/defx-git'
     Plug 'kristijanhusak/defx-icons'
     Plug 'junegunn/gv.vim'
 
+    Plug 'w0rp/ale'
     Plug 't9md/vim-quickhl'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'tomtom/tcomment_vim'
     " Plug 'tyru/caw.vim'
-    Plug 'jiangmiao/auto-pairs'
+    " Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
     Plug 'andrewradev/splitjoin.vim'
     Plug 'junegunn/fzf' ", { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     Plug 'posva/vim-vue'
     " Plug 'leafoftree/vim-vue-plugin'
     Plug 'tpope/vim-fugitive'
     Plug 'lambdalisue/gina.vim'
+    " Plug 'jremmen/vim-ripgrep'
+    Plug 'Shougo/neomru.vim'
+    Plug 'tpope/vim-unimpaired'
 
     " Plug 'xolox/vim-misc'
     " Plug 'xolox/vim-colorscheme-switcher'
@@ -67,22 +73,27 @@ call plug#begin('$HOME/.local/share/nvim/plugged')
 call plug#end()
 
 source $HOME/.config/nvim/common.vim
+source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/airline.vim
 source $HOME/.config/nvim/tagbar.vim
 source $HOME/.config/nvim/defx.vim
-source $HOME/.config/nvim/denite.vim
+" source $HOME/.config/nvim/denite.vim
 source $HOME/.config/nvim/deoplete.vim
 source $HOME/.config/nvim/startify.vim
 
 colorscheme one
 " colorscheme tender
 " colorscheme jellybeans
+" colorscheme neodark
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 hi! SignColumn ctermbg=NONE guibg=NONE
 
 let g:signify_sign_show_count = 0
 let g:signify_sign_change = '~'
+
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
 
 nnoremap <F4> :Nuake<CR>
 inoremap <F4> <C-\><C-n>:Nuake<CR>

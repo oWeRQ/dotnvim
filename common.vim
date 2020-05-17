@@ -14,12 +14,14 @@ set fileencodings=utf-8,cp1251
 " set path+=**
 set wildmode=longest:full,full
 set splitbelow
-set splitright
+" set splitright
+set inccommand=split
+set scrolloff=1
 
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set expandtab
+" set expandtab
 set cindent
 set autoindent
 set smartindent
@@ -34,16 +36,16 @@ set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNO
 let mapleader="\\"
 
 nnoremap <Tab> <C-w>w
-nnoremap q :q<CR>
+" nnoremap q :bw<CR>
 
 nnoremap <Esc><Esc> :noh<CR>
-tnoremap <Esc> <C-\><C-n>
+au TermOpen * tnoremap <buffer> <Esc> <C-\><C-n>
 
-noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <C-C>:update<CR>
-inoremap <silent> <C-S> <C-O>:update<CR>
+" noremap <silent> <C-S> :update<CR>
+" vnoremap <silent> <C-S> <C-C>:update<CR>
+" inoremap <silent> <C-S> <C-O>:update<CR>
 
-inoremap <silent> <C-Q> <ESC>:qa<CR>
+" inoremap <silent> <C-Q> <ESC>:qa<CR>
 
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 

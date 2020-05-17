@@ -1,4 +1,14 @@
 noremap <silent> <C-p> :Denite source<CR>
+nnoremap <Leader>b :Denite -auto-resize -start-filter buffer<CR>
+nnoremap <Leader>f :Denite -auto-resize -start-filter file/rec<CR>
+nnoremap <Leader>r :Denite -auto-resize -start-filter file/old<CR>
+
+autocmd FileType denite-filter call s:denite_filter_my_settings()
+function! s:denite_filter_my_settings() abort
+	inoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
+	" inoremap <silent><buffer><expr> <Up> denite#do_map('move_to_previous_line')
+	" inoremap <silent><buffer><expr> <Down> denite#do_map('move_to_next_line')
+endfunction
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort

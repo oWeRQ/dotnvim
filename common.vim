@@ -1,6 +1,7 @@
 set nocompatible
 set termguicolors
 set mouse=a
+set selectmode=mouse
 set number
 set relativenumber
 set fcs=eob:\ "need space
@@ -16,7 +17,10 @@ set wildmode=longest:full,full
 set splitbelow
 " set splitright
 set inccommand=split
+set pumheight=20
 set scrolloff=1
+set incsearch
+set nohlsearch
 
 set tabstop=4
 set shiftwidth=4

@@ -86,6 +86,7 @@ source $HOME/.config/nvim/tagbar.vim
 source $HOME/.config/nvim/defx.vim
 " source $HOME/.config/nvim/denite.vim
 source $HOME/.config/nvim/deoplete.vim
+source $HOME/.config/nvim/signify.vim
 source $HOME/.config/nvim/startify.vim
 
 colorscheme one

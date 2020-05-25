@@ -3,7 +3,7 @@ set termguicolors
 set mouse=a
 set selectmode=mouse
 set number
-set relativenumber
+" set relativenumber
 set fcs=eob:\ "need space
 set cursorline
 set updatetime=300
@@ -41,6 +41,7 @@ let mapleader="\\"
 
 nnoremap <Tab> <C-w>w
 " nnoremap q :bw<CR>
+snoremap <C-c> <C-o>"+y
 
 nnoremap <Esc><Esc> :noh<CR>
 au TermOpen * tnoremap <buffer> <Esc> <C-\><C-n>
@@ -51,7 +52,7 @@ au TermOpen * tnoremap <buffer> <Esc> <C-\><C-n>
 
 " inoremap <silent> <C-Q> <ESC>:qa<CR>
 
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 vnoremap <leader>y "+y
 nnoremap <leader>Y "+yg_

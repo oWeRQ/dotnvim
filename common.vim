@@ -4,6 +4,7 @@ set mouse=a
 set selectmode=mouse
 set number
 " set relativenumber
+set signcolumn=yes
 set fcs=eob:\ "need space
 set cursorline
 set updatetime=300
@@ -23,13 +24,18 @@ set incsearch
 set nohlsearch
 
 set tabstop=4
-set shiftwidth=4
+" set shiftwidth=4
+" set softtabstop=-1
 set smarttab
 " set expandtab
-set cindent
+" set cindent
 set autoindent
 set smartindent
-set nowrap
+" set nowrap
+set linebreak
+set breakindent
+set breakindentopt=min:40,shift:2,sbr
+" set showbreak=>
 set list listchars=tab:\›\ ,trail:·,extends:>,precedes:<,space:·
 
 set keymap=russian-jcukenwin

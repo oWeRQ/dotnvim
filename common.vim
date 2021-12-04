@@ -1,7 +1,7 @@
 set nocompatible
 set termguicolors
 set mouse=a
-set selectmode=mouse
+" set selectmode=mouse
 set number
 " set relativenumber
 set signcolumn=yes
@@ -11,6 +11,7 @@ set updatetime=300
 set hidden
 set nobackup
 set nowritebackup
+set undofile
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
 " set path+=**
@@ -34,7 +35,7 @@ set smartindent
 " set nowrap
 set linebreak
 set breakindent
-set breakindentopt=min:40,shift:2,sbr
+set breakindentopt=min:40,shift:4,sbr
 " set showbreak=>
 set list listchars=tab:\›\ ,trail:·,extends:>,precedes:<,space:·
 
@@ -42,6 +43,8 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+set guifont=FiraCode\ Nerd\ Font\ Mono\ Regular:h11
 
 let mapleader="\\"
 

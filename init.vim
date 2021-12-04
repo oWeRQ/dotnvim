@@ -49,6 +49,7 @@ call plug#begin('$HOME/.local/share/nvim/plugged')
     Plug 'tpope/vim-sleuth'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
+    Plug 'simnalamburt/vim-mundo'
 
     " Plug 'scrooloose/syntastic'
     " Plug 'andrewradev/splitjoin.vim'
